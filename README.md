@@ -162,6 +162,8 @@ The SNS email includes:
 * Estimated monthly cost savings
 * Recommendation to delete unused resources
 
+  ![Uploading WhatsApp Image 2025-12-15 at 21.13.32.jpeg…]()
+
 ---
 
 ## 💰 Cost Considerations
