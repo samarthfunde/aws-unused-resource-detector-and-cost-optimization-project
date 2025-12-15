@@ -12,22 +12,7 @@ This project helps reduce unnecessary AWS billing by proactively identifying res
 
 **Flow:**
 
-Amazon EventBridge (Scheduled Rule)
-            │
-            |
-AWS Lambda (Unused Resource Detector)
-            │
-            ├── Scans AWS Account for Unused Resources
-            │   (EC2, EBS, ELB, RDS, S3, etc.)
-            │
-            ├── Generates CSV Cost Optimization Report
-            │
-            ├── Stores CSV Report in Amazon S3
-            │
-            └── Publishes Notification to Amazon SNS
-                        │
-                        |
-                Email Notification to User
+<img width="621" height="493" alt="image" src="https://github.com/user-attachments/assets/3eee4e48-3bab-4c4f-b5de-1c07a1eb0b6d" />
 
 
 ---
@@ -162,7 +147,7 @@ The SNS email includes:
 * Estimated monthly cost savings
 * Recommendation to delete unused resources
 
-  ![Uploading WhatsApp Image 2025-12-15 at 21.13.32.jpeg…]()
+  ![WhatsApp Image 2025-12-15 at 21 13 32](https://github.com/user-attachments/assets/3ff3b5e4-c7ea-4b19-af32-efea32a54484)
 
 ---
 
