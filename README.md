@@ -14,7 +14,7 @@ This project helps reduce unnecessary AWS billing by proactively identifying res
 
 Amazon EventBridge (Scheduled Rule)
             │
-            ▼
+            |
 AWS Lambda (Unused Resource Detector)
             │
             ├── Scans AWS Account for Unused Resources
@@ -26,7 +26,7 @@ AWS Lambda (Unused Resource Detector)
             │
             └── Publishes Notification to Amazon SNS
                         │
-                        ▼
+                        |
                 Email Notification to User
 
 
@@ -76,7 +76,7 @@ aws-unused-resource-detector/
 * Create an SNS **Standard Topic**
 * Add an **Email subscription** and confirm it
 
-📸 Screenshots: `Snapshots_Of_Steps/Step_1_SNS_Create/`
+![WhatsApp Image 2025-12-15 at 20 23 43](https://github.com/user-attachments/assets/279c8b0f-2ee9-469a-b20d-a9e023a9b679)
 
 ---
 
@@ -92,7 +92,8 @@ Attach the following **AWS Managed Policies**:
 * AmazonSNSFullAccess
 * CloudWatchReadOnlyAccess
 
-📸 Screenshots: `Snapshots_Of_Steps/Step_2_IAM_ROLE/`
+![WhatsApp Image 2025-12-15 at 20 26 20](https://github.com/user-attachments/assets/dc486548-859c-4aa1-b5e0-0c70409424d9)
+
 
 ---
 
@@ -101,7 +102,7 @@ Attach the following **AWS Managed Policies**:
 * Create an S3 bucket (example: `aws-unused-resource-reports`)
 * Used to store CSV cost reports
 
-📸 Screenshots: `Snapshots_Of_Steps/Step_3_S3_Bucket/`
+![WhatsApp Image 2025-12-15 at 21 07 35](https://github.com/user-attachments/assets/6c8f04ff-76ee-432d-9a74-b788c9c1b782)
 
 ---
 
@@ -110,18 +111,20 @@ Attach the following **AWS Managed Policies**:
 * Schedule rule (recommended: once per day)
 * Target: Lambda function
 
-📸 Screenshots: `Snapshots_Of_Steps/Step_4_Event_Bridge_Rule/`
+![WhatsApp Image 2025-12-15 at 20 37 47](https://github.com/user-attachments/assets/bb10de34-0e1b-4e6a-93b9-3d19d76bfc62)
 
 ---
 
 ### Step 5️⃣: Create Lambda Function
 
-* Runtime: Python 3.x
-* Timeout: 2 minutes
+* Runtime: Python 3.10
+* Timeout: 5 minutes
 * Attach IAM role
 * Deploy `lambda_function.py`
 
-📸 Screenshots: `Snapshots_Of_Steps/Step_5_Lambda/`
+![WhatsApp Image 2025-12-15 at 20 47 03](https://github.com/user-attachments/assets/805aec42-416b-4381-8632-1e2ccaefdf88)
+
+![WhatsApp Image 2025-12-15 at 20 47 38](https://github.com/user-attachments/assets/67ba9c15-4708-4b97-b505-2088ea9150ac)
 
 ---
 
@@ -147,7 +150,7 @@ Attach the following **AWS Managed Policies**:
   * Estimated Monthly Saving (INR)
   * Total Estimated Saving
 
-📸 Output Screenshots: `Snapshots_Of_Steps/Output/`
+![WhatsApp Image 2025-12-15 at 20 47 38](https://github.com/user-attachments/assets/ca3f66eb-fe71-43de-a426-7e45b83af166)
 
 ---
 
@@ -177,13 +180,6 @@ The SNS email includes:
 
 ---
 
-## 🚀 Future Enhancements
-
-* Automatic cleanup with approval
-* Slack / Microsoft Teams notifications
-* Cost Explorer API integration
-* Terraform / CloudFormation deployment
-
 ---
 
 ## 🧑‍💻 Author
@@ -193,6 +189,4 @@ AWS Cloud & DevOps Engineer
 
 ---
 
-## ⭐ Conclusion
 
-This project demonstrates real-world AWS serverless automation for cost optimization. It is ideal for learning, cloud portfolios, and interview discussions.
