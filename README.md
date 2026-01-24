@@ -1,6 +1,6 @@
 # AWS Unused Resource Detector & Cost Optimization
 
-## 📌 Project Overview
+##  Project Overview
 
 The **AWS Unused Resource Detector & Cost Optimization** project is a serverless automation solution that scans an AWS account to identify unused or idle resources and sends cost optimization alerts via email. It also generates a CSV report and stores it in Amazon S3 for tracking and auditing purposes.
 
@@ -8,7 +8,7 @@ This project helps reduce unnecessary AWS billing by proactively identifying res
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 **Flow:**
 
@@ -17,7 +17,7 @@ This project helps reduce unnecessary AWS billing by proactively identifying res
 
 ---
 
-## 🧰 AWS Services Used
+##  AWS Services Used
 
 * **Amazon EventBridge** – Schedules the Lambda execution (daily / periodic)
 * **AWS Lambda** – Executes Python logic to detect unused resources
@@ -28,7 +28,7 @@ This project helps reduce unnecessary AWS billing by proactively identifying res
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 aws-unused-resource-detector/
@@ -54,9 +54,9 @@ aws-unused-resource-detector/
 
 ---
 
-## ⚙️ Step-by-Step Implementation
+##  Step-by-Step Implementation
 
-### Step 1️⃣: Create SNS Topic
+### Step 1️: Create SNS Topic
 
 * Create an SNS **Standard Topic**
 * Add an **Email subscription** and confirm it
@@ -65,7 +65,7 @@ aws-unused-resource-detector/
 
 ---
 
-### Step 2️⃣: Create IAM Role for Lambda
+### Step 2️: Create IAM Role for Lambda
 
 Attach the following **AWS Managed Policies**:
 
@@ -82,7 +82,7 @@ Attach the following **AWS Managed Policies**:
 
 ---
 
-### Step 3️⃣: Create S3 Bucket
+### Step 3️: Create S3 Bucket
 
 * Create an S3 bucket (example: `aws-unused-resource-reports`)
 * Used to store CSV cost reports
@@ -91,7 +91,7 @@ Attach the following **AWS Managed Policies**:
 
 ---
 
-### Step 4️⃣: Create EventBridge Rule
+### Step 4️: Create EventBridge Rule
 
 * Schedule rule (recommended: once per day)
 * Target: Lambda function
@@ -100,7 +100,7 @@ Attach the following **AWS Managed Policies**:
 
 ---
 
-### Step 5️⃣: Create Lambda Function
+### Step 5️: Create Lambda Function
 
 * Runtime: Python 3.10
 * Timeout: 5 minutes
@@ -113,7 +113,7 @@ Attach the following **AWS Managed Policies**:
 
 ---
 
-## 🔍 Resources Detected
+##  Resources Detected
 
 * Stopped EC2 Instances
 * Unattached EBS Volumes (30+ days)
@@ -124,7 +124,7 @@ Attach the following **AWS Managed Policies**:
 
 ---
 
-## 📄 CSV Report
+##  CSV Report
 
 * Generated automatically on each execution
 * Stored in Amazon S3
@@ -139,7 +139,7 @@ Attach the following **AWS Managed Policies**:
 
 ---
 
-## 📧 Email Notification (SNS)
+##  Email Notification (SNS)
 
 The SNS email includes:
 
@@ -151,7 +151,7 @@ The SNS email includes:
 
 ---
 
-## 💰 Cost Considerations
+##  Cost Considerations
 
 * Uses AWS Free Tier services
 * Minimal cost for EventBridge & SNS
@@ -159,7 +159,7 @@ The SNS email includes:
 
 ---
 
-## 🔐 Security Best Practices
+##  Security Best Practices
 
 * No hardcoded AWS credentials
 * IAM role-based access
@@ -169,7 +169,7 @@ The SNS email includes:
 
 ---
 
-## 🧑‍💻 Author
+##  Author
 
 **Samarth Funde**
 AWS Cloud & DevOps Engineer
